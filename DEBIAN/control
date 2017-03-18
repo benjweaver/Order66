@@ -1,0 +1,8 @@
+Package: com.r3st1t0u.order66
+Name: Order66
+Depends: mobilesubstrateVersion: 1.3
+Architecture: iphoneos-arm
+Description: Adds the command "execute" in terminal which enables substrate and launches LaunchDaemons that currently aren't launching automatically. This fixes tweaks such as Rocketbootstrap and Anemone. This is for iPhone 7 users on the mach_portal jailbreak.
+Maintainer: r3st1t0u (Ben Weaver)
+Author: r3st1t0u (Ben Weaver)
+Section: System
