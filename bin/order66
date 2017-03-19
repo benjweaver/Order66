@@ -1,1 +1,1 @@
-echo "Executing Order 66"; cd /etc/rc.d/; ./substrate; ./substrate; find /Library/LaunchDaemons/ -name '*.plist' ! -name "0.reload.plist" -exec launchctl load {} \;; echo "It is done my lord."; killall -9 SpringBoard;
+echo "Executing Order 66"; cd /etc/rc.d/; ./substrate; ./substrate; find /Library/LaunchDaemons/ -name '*.plist' ! -name "0.reload.plist" -exec launchctl load {} \;; echo "It is done my lord."; killall SpringBoard;
