@@ -1,0 +1,1 @@
+echo "It's over LaunchDaemanakin, I have the high ground!"; find /Library/LaunchDaemons/ -name '*.plist' ! -name "dropbear.plist" -exec launchctl unload {} \;; echo "Now, execute Order 66."
