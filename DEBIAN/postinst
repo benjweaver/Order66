@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Get Files and RAM Size
+cd /System/Library/LaunchDaemons
+RAMFile1=$(ls | grep -E "com\.apple\.jetsamproperties\....\.plist")
+RAMFile2=$(ls | grep -E "com\.apple\.jetsamproperties\....m\.plist")
+RAMMaximum=$(plutil -key Version4 -key PListDevice -key MemoryCapacity $RAMFile1)
+
+# First File
+if [ ! -z "$RAMFile1" ]; then
+    plutil -key Version4 -key System -key Override -key Global -Key UserHighWaterMark -value $RAMMaximum -type int $RAMFile1
+fi
+
+# Second File
+if [ ! -z "$RAMFile2" ]; then
+    plutil -key Version4 -key System -key Override -key Global -Key UserHighWaterMark -value $RAMMaximum -type int $RAMFile2
+fi
