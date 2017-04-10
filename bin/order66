@@ -1,18 +1,7 @@
 #!/bin/bash
-echo "Executing Order 66"
-cd /usr/libexec
-./substrate
-find /Library/LaunchDaemons/ -name '*.plist' ! -name "0.reload.plist" -exec launchctl load {} \;
-cd /var/lib/dpkg/info
-./net.angelxwind.appsyncunified.postinst
-./com.unlimapps.uaupdatetools.postinst
-killall imagent
-echo "It is done my lord."
-#!/bin/sh
-[ -e /var/lib/dpkg/info/net.tetherme.tetherme8.extrainst_ ] && {
-  sleep 1
-  echo Injecting TetherMe
-  /var/lib/dpkg/info/net.tetherme.tetherme8.extrainst_ 
-}
-#!/bin/bash
-launchctl stop com.apple.SpringBoard
+ls /etc/rc.d | while read a; do /etc/rc.d/$a; done
+sleep 1
+launchctl load $(ls /System/Library/LaunchDaemons/ | grep -v 0.reload.plist | grep -v dropbear.plist | while read a; do printf /System/Library/LaunchDaemons/$a\ ; done)
+sleep 1
+killall -9 SpringBoard
+exit 0
