@@ -1,15 +1,10 @@
 #!/bin/bash
-ls /etc/rc.d | while read a; do /etc/rc.d/$a; done
-launchctl unload /Library/LaunchDaemons/
-launchctl load /Library/LaunchDaemons/
-cd /var/lib/dpkg/info
+cd /usr/libexec
+./substrate
+launchctl unload /Library/LaunchDaemons
+launchctl load /Library/LaunchDaemons
 ./net.angelxwind.appsyncunified.postinst
 ./com.unlimapps.uaupdatetools.postinst
 killall imagent
-#!/bin/sh
-[ -e /var/lib/dpkg/info/net.tetherme.tetherme8.extrainst_ ] && {
-  echo Injecting TetherMe
-  /var/lib/dpkg/info/net.tetherme.tetherme8.extrainst_ 
-}
-#!/bin/bash
+sand
 launchctl stop com.apple.SpringBoard

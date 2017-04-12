@@ -1,0 +1,6 @@
+#!/bin/sh
+[ -e /var/lib/dpkg/info/net.tetherme.tetherme8.extrainst_ ] && {
+  sleep 1
+  echo Injecting TetherMe
+  /var/lib/dpkg/info/net.tetherme.tetherme8.extrainst_ 
+}
