@@ -3,6 +3,7 @@ cd /usr/libexec
 ./substrate
 launchctl unload /Library/LaunchDaemons
 launchctl load /Library/LaunchDaemons
+cd /var/lib/dpkg/info
 ./net.angelxwind.appsyncunified.postinst
 ./com.unlimapps.uaupdatetools.postinst
 killall imagent
