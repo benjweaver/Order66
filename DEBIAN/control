@@ -2,9 +2,9 @@ Package: com.r3st1t0u.substratefix
 Name: Substrate Fix for Yalub3
 Depends: mobilesubstrate, com.ericasadun.utilities
 Conflicts: com.codyqx4.ios9rebootfix
-Version: 2.3
+Version: 2.4
 Architecture: iphoneos-arm
-Description: This package is a better substrate enabler for the Yalub3 jailbreak. Version 2.3 retains Order65 continuity. Run with the command "execute" or through Executer for Yalub3 on my repo. You may donate at paypal.me/r3st1t0u!
+Description: This package is a better substrate enabler for the Yalub3 jailbreak. Version 2.4 retains Order65 continuity. Run with the command "execute" or through Executer for Yalub3 on my repo. You may donate at paypal.me/r3st1t0u!
 Maintainer: r3st1t0u (Ben Weaver)
 Author: r3st1t0u (Ben Weaver)
 Section: System

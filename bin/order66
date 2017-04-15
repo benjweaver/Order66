@@ -1,13 +1,8 @@
 #!/bin/bash
 ls /etc/rc.d | while read a; do /etc/rc.d/"$a"; done
 launchctl load /Library/LaunchDaemons
-launchctl unload /System/Library/LaunchDaemons/com.apple.itunesstored.plist
-launchctl load -w /System/Library/LaunchDaemons/com.apple.itunesstored.plist
-launchctl kickstart -k system/com.apple.itunesstored
-launchctl unload /System/Library/LaunchDaemons/com.apple.appstored.plist
-launchctl load -w /System/Library/LaunchDaemons/com.apple.appstored.plist
-launchctl kickstart -k system/com.apple.appstored
 cd /var/lib/dpkg/info
+./com.unlimapps.uaupdatetools.postinst
 ./net.angelxwind.appsyncunified.postinst
 killall imagent
 sand
