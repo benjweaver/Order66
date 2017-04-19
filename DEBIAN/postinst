@@ -1,6 +1,11 @@
 #!/bin/bash
-rm /Library/LaunchDaemons/0.reload.plist
-rm /usr/libexec/reload
+file="/Library/LaunchDaemons/0.reload.plist"
+if [ -f "$file" ]
+then
+	rm /Library/LaunchDaemons/0.reload.plist && rm /usr/libexec/reload
+else
+	echo "Hello there!"
+fi
 # Get Files and RAM Size
 cd /System/Library/LaunchDaemons
 RAMFile1=$(ls | grep -E "com\.apple\.jetsamproperties\....\.plist")
