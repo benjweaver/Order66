@@ -1,6 +1,7 @@
 #!/bin/bash
 ls /etc/rc.d | while read a; do /etc/rc.d/"$a"; done
 launchctl load /Library/LaunchDaemons
+sleep 2
 cd /var/lib/dpkg/info
 ./com.unlimapps.uaupdatetools.postinst
 ./net.angelxwind.appsyncunified.postinst
